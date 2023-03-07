@@ -1,0 +1,18 @@
+<h1 style="text-align: center">Calculator</h1>
+<table>
+  <tr>
+    <td>
+      Vui lòng nhập số đầu tiên :<input type="number" [(ngModel)]="number1">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Vui lòng nhập số đầu tiên :<input type="number" [(ngModel)]="number2">
+    </td>
+  </tr>
+</table>
+<button (click)="addition()">+</button>
+<button (click)="subtraction()">-</button>
+<button (click)="multiplication()">*</button>
+<button (click)="division()">/</button>
+<b>Kết Quả = {{result}}</b>
