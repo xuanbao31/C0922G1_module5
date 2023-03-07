@@ -1,7 +1,5 @@
-let num: number;
-num = 7;
-let sum: number;
-sum = 0;
+let num: number = 7;
+let sum: number = 0;
 
 function fibonacci(num: number): number {
     if (num <= 1) {
@@ -15,4 +13,4 @@ for (let i = 0; i < num; i++) {
     document.write(String(fibonacci(i)));
     sum += fibonacci(i);
 }
-alert("tong cac so fibonacci: "+sum);
+alert("tong cac so fibonacci: " + sum);
