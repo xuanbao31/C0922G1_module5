@@ -1,1 +1,26 @@
-<p>customer-list works!</p>
+<h1 style="text-align: center">CustomerList</h1>
+<table class="table table-success">
+  <tr>
+   <th>STT</th>
+   <th>Name</th>
+   <th>Date</th>
+   <th>Gender</th>
+   <th>IdCard</th>
+   <th>PhoneNumber</th>
+   <th>Email</th>
+   <th>Address</th>
+   <th>CustomerType</th>
+  </tr>
+  <tr *ngFor="let customer of customerList,index as i">
+    <td>{{i+1}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.date}}</td>
+    <td>{{customer.gender}}</td>
+    <td>{{customer.idCard}}</td>
+    <td>{{customer.phoneNumber}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.address}}</td>
+    <td>{{customer.customerType.name}}</td>
+
+  </tr>
+</table>

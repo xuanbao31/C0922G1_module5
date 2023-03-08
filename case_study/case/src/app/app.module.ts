@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './component/header/header/header.component';
 import { HeadComponent } from './component/head/head.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { CustomerListComponent } from './component/customer/customer-list/customer-list.component';
@@ -16,7 +15,6 @@ import { FacilityCreateComponent } from './component/facility/facility-create/fa
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     HeadComponent,
     FooterComponent,
     CustomerListComponent,

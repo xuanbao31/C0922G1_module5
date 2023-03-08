@@ -24,8 +24,73 @@
   "customer": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name":"Nguyễn Thị Hào",
+      "date": "1970-11-07",
+      "gender": "Nữ",
+      "idCard": "643431213",
+      "phoneNumber": "0905123568",
+      "email": "thihao07@gmail.com",
+      "address": "23 Nguyễn Hoàng,Đà Nẵng",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 2,
+      "name":"Phạm Xuân Diệu",
+      "date": "1992-08-08",
+      "gender": "Nữ",
+      "idCard": "865342123",
+      "phoneNumber": "0954333333",
+      "email": "xuandieu92@gmail.com",
+      "address": "K77/22 Thái Phiên, Quảng Trị",
+      "customerType": {
+        "id": 3,
+        "name": "Silver"
+      }
+    },
+    {
+      "id": 3,
+      "name":"Trương Đình Nghệ",
+      "date": "1990-02-27",
+      "gender": "Nam",
+      "idCard": "1488645199",
+      "phoneNumber": "0373213122",
+      "email": "nghenhan2702@gmail.com",
+      "address": "K323/12 Ông Ích Khiêm, Vinh",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 4,
+      "name":"Hoàng Trần Nhi Nhi",
+      "date": "1995-12-09",
+      "gender": "Nữ",
+      "idCard": "795453345",
+      "phoneNumber": "0312345678",
+      "email": "nhinhi123@gmail.com",
+      "address": "224 Lý Thái Tổ, Gia Lai",
+      "customerType": {
+        "id": 4,
+        "name": "Member"
+      }
+    },
+    {
+      "id": 5,
+      "name":"Tôn Nữ Mộc Châu",
+      "date": "2005-12-06",
+      "gender": "Nữ",
+      "idCard": "732434215",
+      "phoneNumber": "0988888844",
+      "email": "tonnuchau@gmail.com",
+      "address": "37 Yên Thế, Đà Nẵng",
+      "customerType": {
+        "id": 4,
+        "name": "Member"
+      }
     }
   ]
 }
