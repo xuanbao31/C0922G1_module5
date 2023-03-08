@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class CalculatorComponent implements OnInit {
   number1 = 0;
   number2 = 0;
-  result: any;
+  result: string |number;
 
   constructor() {
   }
@@ -29,9 +29,10 @@ export class CalculatorComponent implements OnInit {
   }
 
   division() {
-    if (this.number2 == 0) {
-      this.result = "Không thể chia cho 0";
-    }else {
+    // tslint:disable-next-line:triple-equals
+    if (this.number2 === 0) {
+      this.result = 'Không thể chia cho 0';
+    } else {
       this.result = this.number1 / this.number2;
     }
   }
