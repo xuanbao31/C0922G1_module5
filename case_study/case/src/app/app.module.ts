@@ -12,6 +12,7 @@ import { FacilityListComponent } from './component/facility/facility-list/facili
 import { FacilityEditComponent } from './component/facility/facility-edit/facility-edit.component';
 import { FacilityCreateComponent } from './component/facility/facility-create/facility-create.component';
 import {HttpClientModule} from "@angular/common/http";
+import { ContractListComponent } from './component/contract/contract-list/contract-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {HttpClientModule} from "@angular/common/http";
     CustomerEditComponent,
     FacilityListComponent,
     FacilityEditComponent,
-    FacilityCreateComponent
+    FacilityCreateComponent,
+    ContractListComponent
   ],
   imports: [
     BrowserModule,
