@@ -18,18 +18,26 @@ export class CustomerListComponent implements OnInit {
   constructor(private customerService: CustomerService,
               private customerTypeService: CustomerTypeService,
               private router: Router) {
+
   }
 
   ngOnInit(): void {
     this.getAll();
   }
 
-  getAll()
-  {
+  getAll() {
     this.customerService.getAllCustomer().subscribe(next => {
       console.log(next);
       this.customerList = next;
     })
+  }
+
+
+  delete(id: number) {
+     this.customerService.deleteCustomer(this.item.id).subscribe(next=>{
+      alert("Delete Complete");
+     this.ngOnInit();
+     })
   }
 
 }

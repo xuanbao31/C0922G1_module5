@@ -11,6 +11,7 @@ import { CustomerEditComponent } from './component/customer/customer-edit/custom
 import { FacilityListComponent } from './component/facility/facility-list/facility-list.component';
 import { FacilityEditComponent } from './component/facility/facility-edit/facility-edit.component';
 import { FacilityCreateComponent } from './component/facility/facility-create/facility-create.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FacilityCreateComponent } from './component/facility/facility-create/fa
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

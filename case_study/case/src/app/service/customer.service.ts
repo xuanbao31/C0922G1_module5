@@ -17,4 +17,11 @@ export class CustomerService {
     return this.HttpClient.get<Customer[]>(this.URL);
   }
 
+  deleteCustomer(id: number): Observable<Customer[]> {
+    return this.HttpClient.delete<Customer[]>(this.URL + "/" + id);
+  }
+
+  saveCustomer(customer: any) {
+    return this.HttpClient.post<Customer>(this.URL, customer);
+  }
 }
