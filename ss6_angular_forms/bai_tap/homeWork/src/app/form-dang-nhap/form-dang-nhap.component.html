@@ -1,0 +1,17 @@
+<form class="row g-3" [formGroup]="rfCustomer">
+  <div class="col-12">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4" formControlName="email1">
+    <p *ngIf="rfCustomer.controls.email1.touched && rfCustomer.controls.email1?.errors?.required">Khong duoc de
+      trong</p>
+    <p *ngIf="rfCustomer.controls.email1.touched && rfCustomer.controls.email1?.errors?.email">Nhap dung dinh dang
+      email</p>
+  </div>
+  <div class="col-12">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4" formControlName="passWord">
+    <p *ngIf="rfCustomer.controls.passWord.touched && rfCustomer.controls.passWord?.errors?.required">Khong duoc de
+      trong</p>
+    <p *ngIf="rfCustomer.controls.passWord.touched && rfCustomer.controls.passWord?.errors?.minlength">It nhat phai du 6
+      ki tu</p>
+  </div>

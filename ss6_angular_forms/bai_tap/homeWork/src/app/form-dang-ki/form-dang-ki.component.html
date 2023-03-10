@@ -1,0 +1,62 @@
+<form class="row g-3" [formGroup]="rfCustomer">
+  <div class="col-12">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4" formControlName="email1">
+    <p *ngIf="rfCustomer.controls.email1.touched && rfCustomer.controls.email1?.errors?.required">Khong duoc de
+      trong</p>
+    <p *ngIf="rfCustomer.controls.email1.touched && rfCustomer.controls.email1?.errors?.email">Nhap dung dinh dang
+      email</p>
+  </div>
+  <div class="col-12">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4" formControlName="passWord">
+    <p *ngIf="rfCustomer.controls.passWord.touched && rfCustomer.controls.passWord?.errors?.required">Khong duoc de
+      trong</p>
+    <p *ngIf="rfCustomer.controls.passWord.touched && rfCustomer.controls.passWord?.errors?.minlength">It nhat phai du 6
+      ki tu</p>
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">ConfirmPassword</label>
+    <input type="password" class="form-control" id="inputAddress" formControlName="conFirmPass">
+    <p *ngIf="rfCustomer.controls.conFirmPass.touched && rfCustomer.controls.conFirmPass?.errors?.required">Khong duoc
+      de trong</p>
+    <p
+      *ngIf="rfCustomer.controls.conFirmPass.touched && rfCustomer.controls.conFirmPass.value!=rfCustomer.controls.passWord.value">
+      Nhap lai mat khau vua tao</p>
+  </div>
+  <div class="col-12">
+    <label>Country: </label><span style="color:red"
+                                  *ngIf="rfCustomer.controls.country?.errors?.required && rfCustomer.controls.country.touched"> Quốc gia không
+    được
+    để trống</span><br>
+    <select formControlName="country">
+      <option *ngFor="let ct of country" [ngValue]="ct.name">{{ct.name}}</option>
+    </select>
+  </div>
+  <div class="col-12">
+    <label for="inputCity" class="form-label">Age</label>
+    <input type="text" class="form-control" id="inputCity" formControlName="age" >
+    <p *ngIf="rfCustomer.controls.age.touched && rfCustomer.controls.age?.errors?.required">Khong duoc
+      de trong</p>
+    <p *ngIf="rfCustomer.controls.age.touched && rfCustomer.controls.age?.errors?.min">Khong duoc
+      duoi 18</p>
+  </div>
+  <div class="col-12">
+    <label>Gender: </label><br>
+    <input formControlName="gender" value="1" type="radio" name="gender">Male<br>
+    <input formControlName="gender" value="2" type="radio" name="gender">Female
+    <p style="color:red"
+       *ngIf="rfCustomer.controls.gender.errors.required && rfCustomer.controls.gender.touched">Giới tính không
+      đươc để trống</p>
+  </div>
+  <div class="col-12">
+    <label for="inputCity" class="form-label">phoneNumber</label>
+    <input type="text" class="form-control" id="inputCity2" formControlName="phoneNumber" >
+    <p *ngIf="rfCustomer.controls.phoneNumber.touched && rfCustomer.controls.phoneNumber?.errors?.required">Khong duoc
+      de trong</p>
+    <p *ngIf="rfCustomer.controls.phoneNumber.touched && rfCustomer.controls.phoneNumber?.errors?.pattern">nhap dung dinh dang sdt</p>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
