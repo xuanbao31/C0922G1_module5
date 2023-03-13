@@ -24,4 +24,12 @@ export class CustomerService {
   saveCustomer(customer: any) {
     return this.HttpClient.post<Customer>(this.URL, customer);
   }
+
+  findById(id: number) {
+    return this.HttpClient.get<Customer[]>(this.URL + "/" + id);
+  }
+
+  updateCustomer(id: number, customer: Customer) {
+    return this.HttpClient.patch<Customer>(this.URL + "/" + id, customer);
+  }
 }

@@ -13,6 +13,7 @@ import { FacilityEditComponent } from './component/facility/facility-edit/facili
 import { FacilityCreateComponent } from './component/facility/facility-create/facility-create.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ContractListComponent } from './component/contract/contract-list/contract-list.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,11 +28,12 @@ import { ContractListComponent } from './component/contract/contract-list/contra
     FacilityCreateComponent,
     ContractListComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

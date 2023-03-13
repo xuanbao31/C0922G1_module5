@@ -1,1 +1,27 @@
-<p>customer-edit works!</p>
+<h2>Edit Customer</h2>
+<form [formGroup]="updateForm" ) (ngSubmit)="update(id)">
+  <table>
+    <tr>
+    <td>
+      <label>Loai Khach Hang</label>
+ <select formControlName="customerType">
+<option *ngFor="let item of customerType" [ngValue]="item">{{item.name}}
+</option>
+ </select>
+    </td>
+    </tr>
+    <tr>
+      <td>Name:</td>
+      <input type="text" formControlName="name">
+    </tr>
+    <tr>
+      <td>Date:</td>
+      <input type="text" formControlName="date">
+    </tr>
+    <tr>
+      <td>Date:</td>
+      <input type="text" formControlName="gender">
+    </tr>
+  </table>
+
+</form>

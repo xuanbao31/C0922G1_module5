@@ -1,1 +1,45 @@
-<p>customer-create works!</p>
+<h2>Create Customer</h2>
+<form [formGroup]="customerForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>
+        <label class="form-label">Loai Khach Hang</label>
+        <select formControlName="customerType">
+          <option *ngFor="let item of customerType" [ngValue]="item">{{item.name}}    </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Tên khách hàng:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>date</td>
+      <td><input type="text" formControlName="date"></td>
+    </tr>
+    <tr>
+      <td>gender</td>
+      <td><input type="text" formControlName="gender"></td>
+    </tr>
+    <tr>
+      <td>idCard</td>
+      <td><input type="text" formControlName="idCard"></td>
+    </tr>
+    <tr>
+      <td>phoneNumber</td>
+      <td><input type="text" formControlName="phoneNumber"></td>
+    </tr>
+    <tr>
+      <td>email</td>
+      <td><input type="text" formControlName="email"></td>
+    </tr>
+    <tr>
+      <td>address</td>
+      <td><input type="text" formControlName="address"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Tạo mới</button></td>
+    </tr>
+  </table>
+</form>
