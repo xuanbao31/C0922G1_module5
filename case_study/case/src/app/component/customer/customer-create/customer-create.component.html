@@ -12,30 +12,37 @@
     <tr>
       <td>Tên khách hàng:</td>
       <td><input type="text" formControlName="name"></td>
+      <p *ngIf="customerForm.controls.name.touched&&customerForm.controls.name?.errors?.required">Khong Duoc De Trong</p>
     </tr>
     <tr>
       <td>date</td>
       <td><input type="text" formControlName="date"></td>
+      <p *ngIf="customerForm.controls.date.touched&&customerForm.controls.date?.errors?.required">Khong Duoc De Trong</p>
     </tr>
     <tr>
       <td>gender</td>
       <td><input type="text" formControlName="gender"></td>
+      <p *ngIf="customerForm.controls.gender.touched&&customerForm.controls.gender?.errors?.required">Khong Duoc De Trong</p>
     </tr>
     <tr>
       <td>idCard</td>
       <td><input type="text" formControlName="idCard"></td>
+      <p *ngIf="customerForm.controls.idCard.touched&&customerForm.controls.idCard?.errors?.required">Khong Duoc De Trong</p>
     </tr>
     <tr>
       <td>phoneNumber</td>
       <td><input type="text" formControlName="phoneNumber"></td>
+      <p *ngIf="customerForm.controls.phoneNumber.touched&&customerForm.controls.phoneNumber?.errors?.required">Khong Duoc De Trong</p>
     </tr>
     <tr>
       <td>email</td>
       <td><input type="text" formControlName="email"></td>
+      <p *ngIf="customerForm.controls.email.touched&&customerForm.controls.email?.errors?.required">Khong Duoc De Trong</p>
     </tr>
     <tr>
       <td>address</td>
       <td><input type="text" formControlName="address"></td>
+      <p *ngIf="customerForm.controls.address.touched&&customerForm.controls.address?.errors?.required">Khong Duoc De Trong</p>
     </tr>
     <tr>
       <td></td>

@@ -4,7 +4,7 @@ import {CustomerService} from "../../../service/customer.service";
 import {CustomerTypeService} from "../../../service/customer-type.service";
 import {Customer} from "../../../model/customer";
 import {CustomerType} from "../../../model/customer-type";
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 
 @Component({
@@ -23,14 +23,14 @@ export class CustomerCreateComponent implements OnInit {
               private router: Router) {
     this.customerForm = new FormGroup({
       id: new FormControl(),
-      name: new FormControl(),
-      date: new FormControl(),
-      gender: new FormControl(),
-      idCard: new FormControl(),
-      phoneNumber: new FormControl(),
-      email: new FormControl(),
-      address: new FormControl(),
-      customerType: new FormControl(),
+      name: new FormControl('', [Validators.required]),
+      date: new FormControl('', [Validators.required]),
+      gender: new FormControl('', [Validators.required]),
+      idCard: new FormControl('', [Validators.required]),
+      phoneNumber: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      address: new FormControl('', [Validators.required]),
+      customerType: new FormControl('', [Validators.required]),
 
     });
     this.customerTypeService.getAllCustomerType().subscribe(next => {

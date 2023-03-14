@@ -9,9 +9,14 @@ import {Router} from "@angular/router";
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products: Product[] = [];
-  product:Product={id:1};
-
+  productList: Product[]=[];
+  item:Product={};
+  name = '';
+  id = -1;
+  check(id:number,name: string) {
+    this.id= id;
+    this.name = name;
+  }
   constructor(private productService: ProductService,
               private router:Router) {
   }
@@ -21,11 +26,19 @@ export class ProductListComponent implements OnInit {
   }
 
   getAll() {
-    this.products = this.productService.getAll();
+   this.productService.getAll().subscribe(next=>{
+     this.productList=next;
+   })
   }
-  deleteProduct(id: any) {
-    this.productService.deleteById(parseInt(id));
-    this.router.navigateByUrl("/product");
-    alert("Xóa thành công");
+  delete(){
+      this.productService.delete(this.id).subscribe(next=>{
+        alert("deleteComplete");
+        this.ngOnInit();
+      })
   }
+  // deleteProduct(id: any) {
+  //   this.productService.deleteById(parseInt(id));
+  //   this.router.navigateByUrl("/product");
+  //   alert("Xóa thành công");
+  // }
 }

@@ -1,1 +1,63 @@
-<p>facility-create works!</p>
+<h2>Facility Create</h2>
+<form [formGroup]="facilityForm" (ngSubmit)="submit()">
+  <div class="mb-3">
+    <label>FacilityType</label>
+    <select formControlName="facilityType">
+      <option *ngFor="let item of facilityType" [ngValue]="item">{{item.name}}
+      </option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>FacilityType</label>
+    <select formControlName="rentType">
+      <option *ngFor="let item of rentType" [ngValue]="item">{{item.name}}
+      </option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>Name:</label>
+    <input class="form-control" type="text" formControlName="name">
+    <p *ngIf="facilityForm.controls.name.touched&&facilityForm.controls.name?.errors?.required">Khong Duoc De Trong</p>
+  </div>
+<div class="mb-3">
+  <label>area:</label>
+  <input class="form-control" type="text" formControlName="area">
+  <p *ngIf="facilityForm.controls.area.touched&&facilityForm.controls.area?.errors?.required">Khong Duoc De Trong</p>
+</div>
+<div class="mb-3">
+  <label>cost:</label>
+  <input class="form-control" type="text" formControlName="cost">
+  <p *ngIf="facilityForm.controls.cost.touched&&facilityForm.controls.cost?.errors?.required">Khong Duoc De Trong</p>
+</div>
+<div class="mb-3">
+  <label>maxPeople:</label>
+  <input class="form-control" type="text" formControlName="maxPeople">
+  <p *ngIf="facilityForm.controls.maxPeople.touched&&facilityForm.controls.maxPeople?.errors?.required">Khong Duoc De Trong</p>
+</div>
+<div class="mb-3">
+  <label>standardRoom:</label>
+  <input class="form-control" type="text" formControlName="standardRoom">
+  <p *ngIf="facilityForm.controls.standardRoom.touched&&facilityForm.controls.standardRoom?.errors?.required">Khong Duoc De Trong</p>
+</div>
+<div class="mb-3">
+  <label>description:</label>
+  <input class="form-control" type="text" formControlName="description">
+  <p *ngIf="facilityForm.controls.description.touched&&facilityForm.controls.description?.errors?.required">Khong Duoc De Trong</p>
+</div>
+<div class="mb-3">
+  <label>poolArea:</label>
+  <input class="form-control" type="text" formControlName="poolArea">
+  <p *ngIf="facilityForm.controls.poolArea.touched&&facilityForm.controls.poolArea?.errors?.required">Khong Duoc De Trong</p>
+</div>
+<div class="mb-3">
+  <label>floor:</label>
+  <input class="form-control" type="text" formControlName="floor">
+  <p *ngIf="facilityForm.controls.floor.touched&&facilityForm.controls.floor?.errors?.required">Khong Duoc De Trong</p>
+</div>
+  <<div class="mb-3">
+  <label>facilityFree:</label>
+  <input class="form-control" type="text" formControlName="facilityFree">
+  <p *ngIf="facilityForm.controls.facilityFree.touched&&facilityForm.controls.facilityFree?.errors?.required">Khong Duoc De Trong</p>
+</div>
+  <button class="btn btn-primary" type="submit">Create</button>
+</form>

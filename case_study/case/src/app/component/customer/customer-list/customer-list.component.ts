@@ -11,7 +11,9 @@ import {Router} from "@angular/router";
 })
 export class CustomerListComponent implements OnInit {
   customerList: Customer[] = [];
-  item: Customer = {};
+  item: Customer = {
+  };
+
   page: number = 0;
 
 

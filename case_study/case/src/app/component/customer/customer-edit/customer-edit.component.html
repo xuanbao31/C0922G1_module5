@@ -1,26 +1,53 @@
 <h2>Edit Customer</h2>
-<form [formGroup]="updateForm" ) (ngSubmit)="update(id)">
+<form [formGroup]="updateForm" (ngSubmit)="update(id)">
   <table>
     <tr>
-    <td>
-      <label>Loai Khach Hang</label>
- <select formControlName="customerType">
-<option *ngFor="let item of customerType" [ngValue]="item">{{item.name}}
-</option>
- </select>
-    </td>
+      <td>
+        <label>Loai Khach Hang</label>
+        <select formControlName="customerType" [compareWith]="comparaFn">
+          <option *ngFor="let item of customerType" [ngValue]="item">{{item.name}}
+          </option>
+        </select>
+      </td>
     </tr>
     <tr>
-      <td>Name:</td>
-      <input type="text" formControlName="name">
+      <td>Tên khách hàng:</td>
+      <td><input type="text" formControlName="name"></td>
+      <p *ngIf="updateForm.controls.name.touched&&updateForm.controls.name?.errors?.required">Khong Duoc De Trong</p>
     </tr>
     <tr>
-      <td>Date:</td>
-      <input type="text" formControlName="date">
+      <td>date</td>
+      <td><input type="text" formControlName="date"></td>
+      <p *ngIf="updateForm.controls.date.touched&&updateForm.controls.date?.errors?.required">Khong Duoc De Trong</p>
     </tr>
     <tr>
-      <td>Date:</td>
-      <input type="text" formControlName="gender">
+      <td>gender</td>
+      <td><input type="text" formControlName="gender"></td>
+      <p *ngIf="updateForm.controls.gender.touched&&updateForm.controls.gender?.errors?.required">Khong Duoc De Trong</p>
+    </tr>
+    <tr>
+      <td>idCard</td>
+      <td><input type="text" formControlName="idCard"></td>
+      <p *ngIf="updateForm.controls.idCard.touched&&updateForm.controls.idCard?.errors?.required">Khong Duoc De Trong</p>
+    </tr>
+    <tr>
+      <td>phoneNumber</td>
+      <td><input type="text" formControlName="phoneNumber"></td>
+      <p *ngIf="updateForm.controls.phoneNumber.touched&&updateForm.controls.phoneNumber?.errors?.required">Khong Duoc De Trong</p>
+    </tr>
+    <tr>
+      <td>email</td>
+      <td><input type="text" formControlName="email"></td>
+      <p *ngIf="updateForm.controls.email.touched&&updateForm.controls.email?.errors?.required">Khong Duoc De Trong</p>
+    </tr>
+    <tr>
+      <td>address</td>
+      <td><input type="text" formControlName="address"></td>
+      <p *ngIf="updateForm.controls.address.touched&&updateForm.controls.address?.errors?.required">Khong Duoc De Trong</p>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Tạo mới</button></td>
     </tr>
   </table>
 

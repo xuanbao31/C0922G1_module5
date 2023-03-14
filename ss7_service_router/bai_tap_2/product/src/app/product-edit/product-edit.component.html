@@ -1,12 +1,22 @@
 
 <button class="btn btn-info" style="margin: 10px" routerLink="">Quay lại</button>
 <h2 style= "color: red;">Sửa thông tin</h2>
-<form [formGroup]="productForm" (ngSubmit)="submit()">
+<form [formGroup]="productUpdateForm" (ngSubmit)="update(id)">
   <table  >
-    <tr hidden>
-      <td>Mã sản phẩm:</td>
-      <td><input type="text" formControlName="id" ></td>
+    <tr>
+      <td>
+        <label>Loai San Pham</label>
+        <select formControlName="category" [compareWith]="comparaFn">
+          <option *ngFor="let item of categoryList" [ngValue]="item">{{item.name}}
+          </option>
+        </select>
+      </td>
+
     </tr>
+<!--    <tr hidden>-->
+<!--      <td>Mã sản phẩm:</td>-->
+<!--      <td><input type="text" formControlName="id" ></td>-->
+<!--    </tr>-->
     <tr>
       <td>Tên sản phẩm:</td>
       <td><input type="text" formControlName="name"></td>

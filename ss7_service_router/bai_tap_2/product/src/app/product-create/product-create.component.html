@@ -1,0 +1,27 @@
+<h2>Product Create</h2>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>
+        <label class="form-label">Loai Khach Hang</label>
+        <select formControlName="category">
+          <option *ngFor="let item of category" [ngValue]="item">{{item.name}} </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>name:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>price:</td>
+      <td><input type="text" formControlName="price"></td>
+    </tr>
+    <tr>
+      <td>description:</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+  </table>
+  <button class="btn btn-primary">Submit</button>
+</form>
+

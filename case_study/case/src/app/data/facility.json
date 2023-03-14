@@ -1,0 +1,76 @@
+{
+  "rentType": [
+    {
+      "id": 1,
+      "name": "year"
+    },
+    {
+      "id": 2,
+      "name": "month"
+    },
+    {
+      "id": 3,
+      "name": "day"
+    },
+    {
+      "id": 4,
+      "name": "hour"
+    }
+  ],
+  "facilityType": [
+    {
+      "id": 1,
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Room"
+    }
+  ],
+  "facility": [
+    {
+      "id": 1,
+      "name": "Villa Beach Front",
+      "area": "25000",
+      "cost": "1000000",
+      "maxPeople": "10",
+      "standardRoom": "vip",
+      "description": "Có hồ bơi",
+      "poolArea": "500",
+      "floor": "4",
+      "facilityFree": "Free Girl",
+      "facilityType": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "rentType": {
+        "id": 1,
+        "name": "day"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Room Twin 01",
+      "area": "14000",
+      "cost": "1000000",
+      "maxPeople": "2",
+      "standardRoom": "Vip",
+      "description": "Có tivi",
+      "poolArea": null,
+      "floor": "null",
+      "facilityFree": "Free Girl",
+      "facilityType": {
+        "id": 3,
+        "name": "room"
+      },
+      "rentType": {
+        "id": 4,
+        "name": "hour"
+      }
+    }
+  ]
+}
