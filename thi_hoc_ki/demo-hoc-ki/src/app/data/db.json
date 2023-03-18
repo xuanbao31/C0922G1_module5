@@ -1,0 +1,59 @@
+{
+  "busType": [
+    {
+      "id": 1,
+      "loaiXe": "Giuong Nam"
+    },
+    {
+      "id": 2,
+      "loaiXe": "Ghe Ngoi"
+    }
+  ],
+  "bus": [
+    {
+      "id": 3,
+      "soXe": "1233",
+      "nhaXe": "Phuong Trang",
+      "diemDi": "Da Nang",
+      "diemDen": "Phu Quoc",
+      "soDienThoai": "0986654456",
+      "email": "HoangLong@gmail.com",
+      "gioDi": "17:20",
+      "gioDen": "23:50",
+      "busType": {
+        "id": 2,
+        "loaiXe": "Ghe Ngoi"
+      }
+    },
+    {
+      "id": 4,
+      "soXe": "1236",
+      "nhaXe": "Hoang Long",
+      "diemDi": "Da Nang",
+      "diemDen": "Da Lat",
+      "soDienThoai": "0986654456",
+      "email": "PhuongTrang@gmail.com",
+      "gioDi": "17:20",
+      "gioDen": "23:50",
+      "busType": {
+        "id": 1,
+        "loaiXe": "Ghe Nam"
+      }
+    },
+    {
+      "id": 5,
+      "soXe": "1259",
+      "nhaXe": "Hoang Long",
+      "diemDi": "Da Nang",
+      "diemDen": "Buon Me Thuot",
+      "soDienThoai": "0986654456",
+      "email": "HoangLong@gmail.com",
+      "gioDi": "17:20",
+      "gioDen": "23:50",
+      "busType": {
+        "id": 2,
+        "loaiXe": "Ghe Ngoi"
+      }
+    }
+  ]
+}

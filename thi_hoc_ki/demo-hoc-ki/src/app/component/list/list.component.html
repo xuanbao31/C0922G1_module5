@@ -1,0 +1,63 @@
+<h1 style="text-align: center">BusList</h1>
+<button class="btn btn-primary" [routerLink]="['create']">Add To List</button>
+<table class="table table-striped" style="color: chocolate" >
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>soXe</th>
+    <th>nhaXe</th>
+    <th>diemDi</th>
+    <th>diemDen</th>
+    <th>soDienThoai</th>
+    <th>email</th>
+    <th>gioDi</th>
+    <th>gioDen</th>
+    <th>busType</th>
+    <th colspan="2">Chuc Nang</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let bus of busList,index as i">
+    <td>{{i + 1}}</td>
+    <td>{{bus.soXe}}</td>
+    <td>{{bus.nhaXe}}</td>
+    <td>{{bus.diemDi}}</td>
+    <td>{{bus.diemDen}}</td>
+    <td>{{bus.soDienThoai}}</td>
+    <td>{{bus.email}}</td>
+    <td>{{bus.gioDi}}</td>
+    <td>{{bus.gioDen}}</td>
+    <td>{{bus.busType.loaiXe}}</td>
+    <td>
+
+      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              (click)="item=bus">
+        Xóa
+      </button>
+    </td>
+    <td><button class="btn btn-primary" [routerLink]="['edit',bus.id]">Edit</button></td>
+  </tr>
+  </tbody>
+
+
+</table>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xoa Customer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>bạn muốn xóa so xe {{item.soXe}} không</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">dong</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete(item.id)">xoa
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

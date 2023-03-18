@@ -1,0 +1,63 @@
+<button class="btn btn-info" [routerLink]="['']" >Back To List</button>
+<form [formGroup]="busForm" (ngSubmit)="submit()">
+  <table class="table table-borderedd">
+    <tr>
+      <td>
+        <label>Loai Xe</label>
+        <select formControlName="busType" >
+          <option *ngFor="let item of busType" [ngValue]="item">{{item.loaiXe}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>soXe:</td>
+      <td><input type="text" formControlName="soXe"></td>
+      <p *ngIf="busForm.controls.soXe.touched && busForm.controls.soXe?.errors?.required">Khong duoc de
+        trong</p>
+    </tr>
+    <tr>
+      <td>nhaXe:</td>
+      <td><input type="text" formControlName="nhaXe"></td>
+      <p *ngIf="busForm.controls.nhaXe.touched && busForm.controls.nhaXe?.errors?.required">Khong duoc de
+        trong</p>
+    </tr>
+    <tr>
+      <td>diemDi:</td>
+      <td><input type="text" formControlName="diemDi"></td>
+      <p *ngIf="busForm.controls.diemDi.touched && busForm.controls.diemDi?.errors?.required">Khong duoc de
+        trong</p>
+    </tr>
+    <tr>
+      <td>diemDen:</td>
+      <td><input type="text" formControlName="diemDen"></td>
+      <p *ngIf="busForm.controls.diemDen.touched && busForm.controls.diemDen?.errors?.required">Khong duoc de
+        trong</p>
+    </tr>
+    <tr>
+      <td>soDienThoai:</td>
+      <td><input type="text" formControlName="soDienThoai"></td>
+      <p *ngIf="busForm.controls.soDienThoai.touched && busForm.controls.soDienThoai?.errors?.required">Khong duoc de
+        trong</p>
+    </tr>
+    <tr>
+      <td>email:</td>
+      <td><input type="text" formControlName="email"></td>
+      <p *ngIf="busForm.controls.email.touched && busForm.controls.email?.errors?.required">Khong duoc de
+        trong</p>
+    </tr>
+    <tr>
+      <td>gioDi:</td>
+      <td><input type="text" formControlName="gioDi"></td>
+      <p *ngIf="busForm.controls.gioDi.touched && busForm.controls.gioDi?.errors?.required">Khong duoc de
+        trong</p>
+    </tr>
+    <tr>
+      <td>gioDen:</td>
+      <td><input type="text" formControlName="gioDen"></td>
+      <p *ngIf="busForm.controls.gioDen.touched && busForm.controls.gioDen?.errors?.required">Khong duoc de
+        trong</p>
+    </tr>
+  </table>
+  <button class="btn btn-outline-primary">Submit</button>
+</form>
+
